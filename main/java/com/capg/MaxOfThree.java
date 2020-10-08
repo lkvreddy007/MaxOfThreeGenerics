@@ -1,21 +1,9 @@
 package com.capg;
 
-public class MaxOfThree {
+public class MaxOfThree <E extends Comparable<E>> {
 	
-	public static Integer findMax(Integer x,Integer y,Integer z) {
-		Integer max=x;
-		if(y.compareTo(max)>0) {
-			max=y;
-		}
-		if(z.compareTo(max)>0) {
-			max=z;
-		}
-		System.out.println(max);
-		return max;
-	}
-	
-	public static Float findMax(Float x,Float y,Float z) {
-		Float max=x;
+	public static <E extends Comparable<E>> E findMax(E x,E y,E z) {
+		E max=x;
 		if(y.compareTo(max)>0) {
 			max=y;
 		}
@@ -43,5 +31,6 @@ public class MaxOfThree {
 		findMax(1, 2, 3);
 		findMax(8.6f,9.9f,2.3f);
 		findMax("Apple", "Peach", "Banana");
+
 	}
 }
